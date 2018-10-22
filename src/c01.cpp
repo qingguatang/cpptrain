@@ -3,6 +3,7 @@
 
 // c++的输入输出库，相当于c语言中的 #include <stdio.h>
 // 里面有cin和cout两个输入输出对象
+// 文档可见这里：http://www.cplusplus.com/reference/iostream/
 #include <iostream>
 
 // C++中有名字空间的概念
