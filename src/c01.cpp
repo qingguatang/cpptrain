@@ -8,8 +8,9 @@
 
 // C++中有名字空间的概念
 // 你可以理解为， 如果不用这句话，那下面使用 cin 和 cout 这两个对象要带上 std:: 前缀，比如：
-// std::cout << "hello" << endl;
+// std::cout << "hello" << std::endl;
 // 写了这句话，就可以直接使用 cout 和 cin 了。
+
 using namespace std;
 
 // 入口函数，和c语言一样。
@@ -23,7 +24,7 @@ int main() {
   // cout 是一个对象, cout << 其实是调用 cout对象的<<方法。
   // 如果你第一次听到“对象”，或者“面向对象”这个词， 那么就先不要管，只要把下面的语句直接记住。
   // cout << xxx 表示往控制台输出内容就好。
-  cout << "input a character:";
+  cout << "input a character:";    // 相当于c语言中的 printf("input a character:")
 
   // 同理，cin 是一个对象，>> 是一个方法， 第一次学习时，直接记住
   // cin >> c 就是从控制台输入一个字符，放到c中。
