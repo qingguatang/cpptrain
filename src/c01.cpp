@@ -56,5 +56,5 @@ int main() {
     cout << "This is an other character\n";
   }
 
-  // 在main函数中，return 0可省略。
+  // 在main函数中，return 0可省略，有些编译器会出一个警告。
 }
