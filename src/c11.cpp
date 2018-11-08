@@ -10,6 +10,6 @@ using namespace std;
 
 int main() {
   for (i meet you; die; day++) {
-    printf("I Love You");
+    printf("I Love You\n");
   }
 }
