@@ -3,17 +3,19 @@ using namespace std;
 
 
 int main() {
-  // 指针数组，三个元素，每个元素都指向一个字符串
-  char* list[] = { "ZHello", "World", "OK" };
-  int n = sizeof(list) / sizeof(char*);
-  char **str = list;
+  char strs[3][100];
+  for (int i = 0; i < 3; i++) {
+    cin >> strs[i];   // c++中可以使用这个输入，C语言中使用 gets
+  }
 
-  char *min = str[0];
-  for (int i = 1; i < n; i++) {
-    if (strcmp(min, str[i]) > 0) {
-      min = str[i];
+  // 下面就一样了
+
+  char *min = strs[0];
+  for (int i = 1; i < 3; i++) {
+    if (strcmp(min, strs[i]) > 0) {
+      min = strs[i];
     }
   }
 
-  cout << "最小字符串为:" << min << endl;
+  cout << "最小的字符串为：" << min << endl;
 }
