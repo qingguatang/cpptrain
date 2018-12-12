@@ -3,16 +3,29 @@ using namespace std;
 
 
 int main() {
-  char *strs[] = {"Hello", "World", "abcd"};
-  char **ppstrs = strs;
+  char *list[] = { "Hello", "ABC", "BCD" };
+  char **ppstr = list;
 
-  char *min = *ppstrs;   // 相当于 *min = ppstrs[0]
-  for (int i = 1; i < 3; i++) {
-    if (strcmp(min, *(ppstrs + i)) > 0) { // 相当于if (strcmp(min, ppstrs[i]) > 0) {
-      // min = *(ppstrs + i);    用这句也行，其实和下面的一样的
-      min = ppstrs[i];
-    }
-  }
+  ppstr[0]; // "Hello"
+  ppstr[1]; // "ABC"
+  ppstr[2]; // "BCD"
 
-  cout << "最小的字符串为：" << min << endl;
+  ppstr[0][0]; // "H"
+  ppstr[0][1]; // "e"   , Hello的第2个元素
+  ppstr[1][2]; // "C"
+
+
+  // 把上面的改写
+  *(ppstr + 0);   // "Hello"
+  *(ppstr + 1);   // "ABC"
+  *(ppstr + 2);   // "BCD"
+
+  // 相当于ppstr[0][0]
+  *(*(ppstr + 0) + 0); // "H"
+  // 上面减化后就是
+  **ppstr;   // "H"
+
+  *(*(ppstr + 1) + 2);
+  // 上面相当于 ppstr[1][2];   // C
+
 }
